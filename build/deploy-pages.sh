@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-: "${CLOUDFLARE_API_TOKEN:?Set CLOUDFLARE_API_TOKEN for the DoAide Cloudflare account}"
+# Uses the existing Wrangler OAuth login, or CLOUDFLARE_API_TOKEN in CI.
 export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-b9cd9415f53ddec58df5017f346586fa}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 RELEASE="$(mktemp -d "${TMPDIR:-/tmp}/doaide-release.XXXXXX")"

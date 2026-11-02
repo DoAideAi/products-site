@@ -12,13 +12,14 @@ OUT = Path(sys.argv[1]).resolve()
 OUT.mkdir(parents=True, exist_ok=True)
 ALLOWED = {'.html', '.css', '.js', '.png', '.jpg', '.svg', '.ico', '.webp'}
 
-# Root HTML and blog/ are now the canonical source; legacy copies are not published.
+# Publish only the static site sources, never build scripts or local caches.
 for source in [ROOT]:
     for path in source.iterdir():
-        if path.is_file() and (path.suffix in ALLOWED or path.name in {'_headers', 'robots.txt', 'doaide2026indexkey.txt'}):
+        if path.is_file() and (path.suffix in ALLOWED or path.name in {'_headers', '_redirects', 'robots.txt', 'doaide2026indexkey.txt'}):
             shutil.copy2(path, OUT / path.name)
-    if (source / 'blog').exists():
-        shutil.copytree(source / 'blog', OUT / 'blog', dirs_exist_ok=True)
+    for directory in ('blog', 'assets', 'guides', 'company', 'demo'):
+        if (source / directory).exists():
+            shutil.copytree(source / directory, OUT / directory, dirs_exist_ok=True)
 
 class Links(HTMLParser):
     def __init__(self):
@@ -48,7 +49,7 @@ for path in sorted(pages):
         continue
     item = ET.SubElement(sitemap, namespace + 'url')
     name = path.relative_to(OUT).as_posix()
-    ET.SubElement(item, namespace + 'loc').text = 'https://doaide.com/' + ('' if name == 'index.html' else name)
+    ET.SubElement(item, namespace + 'loc').text = 'https://doaide.com/' + ('' if name == 'index.html' else name.removesuffix('index.html') if name.endswith('/index.html') else name)
 ET.indent(sitemap)
 ET.ElementTree(sitemap).write(OUT / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
 
