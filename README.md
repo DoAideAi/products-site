@@ -58,3 +58,13 @@ Rollback uses that retained deployment in Cloudflare Pages (or the inspected
 The 2 November 2026 change preserves the existing tool/guide paths and the legacy
 homepage anchors `products`, `principles`, `pricing`, `free-tools`, `faq`, `company`.
 No new domain is required.
+
+## Introductory pilot — 2 November 2026
+
+The homepage now links to the app's 60-day free SMB/CA pilot. The first cohort
+has 20 SMB places (one registration) and 10 CA places (five registrations,
+including the firm's own). The app is authoritative for current availability,
+500-upload monthly allowances, daily AI limits, enrollment and expiry.
+Published regular prices remain ₹499/month and ₹2,999/month; there is no
+automatic charge. Deploy the app's pilot API before publishing this homepage.
+The demo form still only prepares an email; it does not reserve a pilot place.

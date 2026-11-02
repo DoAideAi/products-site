@@ -18,7 +18,9 @@ async function main() {
       assert.match(await page.locator('h1').innerText(), /GST reconciliation/);
       assert.equal(await page.locator('#free-tools .tool').count(), 3);
       assert(await page.getByRole('link', { name: 'Book a demo', exact: true }).count() > 0);
-      assert.equal(await page.getByRole('link', { name: 'View current plans' }).getAttribute('href'), 'https://gst.doaide.com/pricing');
+      assert.equal(await page.getByRole('link', { name: 'See pilot availability' }).getAttribute('href'), 'https://gst.doaide.com/pricing');
+      assert.match(await page.locator('#pricing').innerText(), /60 days/);
+      assert.match(await page.locator('#pricing').innerText(), /500 invoice uploads/);
       assert.match(await page.locator('.sample').innerText(), /Illustrative example/i);
       const question = page.locator('.faq details').first();
       await question.locator('summary').click();
