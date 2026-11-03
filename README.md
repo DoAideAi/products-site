@@ -80,3 +80,27 @@ including the firm's own). The app is authoritative for current availability,
 Published regular prices remain ₹499/month and ₹2,999/month; there is no
 automatic charge. Deploy the app's pilot API before publishing this homepage.
 The demo form still only prepares an email; it does not reserve a pilot place.
+
+## GST blog — 3 November 2026
+
+`blog.html` serves the GST blog hub at `/blog` on Cloudflare Pages. Its article
+links are ordinary HTML, with client-side search and topic filtering in
+`assets/blog.js`. Editorial layout and article styles live in `assets/blog.css`.
+The homepage, desktop/mobile navigation and resource footers link to the hub.
+The previous mixed-topic collection is retained at `/blog-archive.html`, and all
+existing article URLs remain available.
+
+The featured article is `blog/gstr-2b-mismatch-review-checklist.html`. It contains
+an operational checklist, an explicitly synthetic example and an official GSTN
+reference. Existing articles linked from the collection have not been re-audited
+for current tax rules. New articles should include a source, author and actual
+publication date; add their card and structured-data entry to `blog.html`.
+
+Run `node tests/blog-smoke.cjs http://127.0.0.1:8046` alongside the existing browser
+smoke test against a packaged release. It checks combined search/filter behavior,
+empty/reset states, keyboard interaction, article links, mobile navigation,
+theme persistence and readable content without JavaScript.
+
+This release is based on production commit `8e4aa7c`, preserving the live demo
+submission and consented measurement changes. Previous production deployment:
+`a7e1ec63-96ae-4855-ab06-4f9d39e71dd1`.

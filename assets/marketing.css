@@ -369,3 +369,7 @@ img, svg { display: block; }
 section[id] {scroll-margin-top:88px}
 
 .form-trap {position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}
+
+/* Keep the expanded resource navigation clear on smaller laptop widths. */
+.nav a[aria-current], .mobile-nav a[aria-current] {color:var(--accent-text);font-weight:600}
+@media(max-width:960px){.nav{display:none}.burger{display:inline-grid}}

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSTR-2B Mismatches: A Practical Review Checklist — DoAide GST</title>
+<meta name="description" content="A practical checklist for accounting firms to compare purchase records with GSTR-2B, investigate mismatches and prepare an accountant-reviewed handoff.">
+<meta name="theme-color" content="#0d9488">
+<link rel="canonical" href="https://doaide.com/blog/gstr-2b-mismatch-review-checklist">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%225%22%20fill%3D%22%23111%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%225%22%20r%3D%222.3%22%20fill%3D%22%230d9488%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%225%22%20r%3D%222.3%22%20fill%3D%22%23d97706%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%225%22%20r%3D%222.3%22%20fill%3D%22%23e11d48%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2212%22%20r%3D%222.3%22%20fill%3D%22%237c3aed%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.3%22%20fill%3D%22%230284c7%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2212%22%20r%3D%222.3%22%20fill%3D%22%2316a34a%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2219%22%20r%3D%222.3%22%20fill%3D%22%23db2777%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2219%22%20r%3D%222.3%22%20fill%3D%22%23ea580c%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2219%22%20r%3D%222.3%22%20fill%3D%22%234f46e5%22%2F%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DoAide GST">
+<meta property="og:title" content="GSTR-2B Mismatches: A Practical Review Checklist — DoAide GST">
+<meta property="og:description" content="A practical checklist for accounting firms to compare purchase records with GSTR-2B, investigate mismatches and prepare an accountant-reviewed handoff.">
+<meta property="og:url" content="https://doaide.com/blog/gstr-2b-mismatch-review-checklist">
+<meta property="og:image" content="https://doaide.com/gst-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DoAide GST — reconciliation for accounting firms">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GSTR-2B Mismatches: A Practical Review Checklist — DoAide GST">
+<meta name="twitter:description" content="A practical checklist for accounting firms to compare purchase records with GSTR-2B, investigate mismatches and prepare an accountant-reviewed handoff.">
+<meta name="twitter:image" content="https://doaide.com/gst-share.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "GSTR-2B Mismatches: A Practical Review Checklist", "description": "A practical checklist for accounting firms to compare purchase records with GSTR-2B, investigate mismatches and prepare an accountant-reviewed handoff.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "DoAide", "url": "https://doaide.com/"}, "publisher": {"@type": "Organization", "name": "DoAide", "url": "https://doaide.com/"}, "mainEntityOfPage": "https://doaide.com/blog/gstr-2b-mismatch-review-checklist", "isPartOf": {"@type": "Blog", "url": "https://doaide.com/blog", "name": "DoAide GST Blog"}, "inLanguage": "en-IN", "articleSection": "Reconciliation"}</script>
+<!-- Theme: apply before paint to avoid flash -->
+<script>
+(function(){
+  var stored;
+  try { stored = localStorage.getItem("doaide-theme"); } catch(e) {}
+  if (stored === "dark" || stored === "light") {
+    document.documentElement.setAttribute("data-theme", stored);
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/marketing.css">
+<script defer src="/assets/marketing.js">
+</script>
+<script async src="https://analytics.doaide.com/script.js" data-website-id="bc49d398-4d77-49b9-8f06-ee0db534f0d0">
+</script>
+<script defer src="/assets/ads.js"></script>
+<link rel="stylesheet" href="/assets/blog.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 6 9 17l-5-5"/>
+</symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 12h14M13 6l6 6-6 6"/>
+</symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="M12 5v14M5 12h14"/>
+</symbol>
+  </defs>
+</svg>
+<header class="header">
+<div class="wrap header__inner">
+<a class="brand" href="/" aria-label="DoAide GST home">
+<svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true">
+<rect width="24" height="24" rx="6" fill="#111"/>
+<circle cx="5" cy="5" r="2.3" fill="#0d9488"/>
+<circle cx="12" cy="5" r="2.3" fill="#d97706"/>
+<circle cx="19" cy="5" r="2.3" fill="#e11d48"/>
+<circle cx="5" cy="12" r="2.3" fill="#7c3aed"/>
+<circle cx="12" cy="12" r="2.3" fill="#0284c7"/>
+<circle cx="19" cy="12" r="2.3" fill="#16a34a"/>
+<circle cx="5" cy="19" r="2.3" fill="#db2777"/>
+<circle cx="12" cy="19" r="2.3" fill="#ea580c"/>
+<circle cx="19" cy="19" r="2.3" fill="#4f46e5"/>
+</svg> DoAide <span style="color:var(--accent-text)">GST</span>
+</a>
+<nav class="nav" aria-label="Primary">
+<a href="/#products">How it works</a>
+<a href="/#pricing">Pricing</a>
+<a href="/guides/">Guides</a>
+<a href="/blog.html" aria-current="true">Blog</a>
+<a href="https://gst.doaide.com/login">Sign in</a>
+</nav>
+<div class="header__actions">
+<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+</svg>
+</button>
+<a class="btn btn--primary btn--sm" href="/demo/" data-umami-event="demo-request-open">Book a demo</a>
+<button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M4 7h16M4 12h16M4 17h16"/>
+</svg>
+</button>
+</div>
+</div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+<a href="/#products">How it works</a>
+<a href="/#pricing">Pricing</a>
+<a href="/guides/">Guides</a>
+<a href="/blog.html" aria-current="true">Blog</a>
+<a href="https://gst.doaide.com/login">Sign in</a>
+</nav>
+</header>
+<main id="main">
+<div class="wrap blog-reading">
+<nav class="blog-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog.html">GST blog</a><span aria-hidden="true">/</span><span>Reconciliation</span></nav>
+<header class="blog-article-header"><p class="blog-eyebrow">RECONCILIATION · PRACTICAL CHECKLIST</p><h1>GSTR-2B mismatches:<br>a practical review checklist.</h1><p class="blog-article-deck">Give every difference an explanation, an owner and a next step before the final review.</p><p class="blog-byline">By DoAide · <time datetime="2026-11-03">3 November 2026</time></p></header>
+<div class="blog-reading__layout">
+<aside class="blog-toc"><p>IN THIS ARTICLE</p><nav aria-label="Article contents"><a href="#start">Start with the same scope</a><a href="#compare">Compare the details</a><a href="#exceptions">Sort the exceptions</a><a href="#example">Work through an example</a><a href="#handoff">Prepare the handoff</a></nav></aside>
+<article class="blog-prose" aria-label="GSTR-2B mismatch review checklist">
+<p>Your purchase register and GSTR-2B show different totals. Before changing a figure, establish which records explain the difference. A useful reconciliation leaves a trail that another accountant can follow.</p>
+<p>GSTN advises taxpayers to reconcile GSTR-2B with their own books, avoid claiming credit twice and assess eligibility beyond what the statement displays. A matched record still needs the relevant eligibility checks. <a href="https://tutorial.gst.gov.in/userguide/returns/FAQ_gstr2b.htm">Source: GST portal GSTR-2B FAQs.</a></p>
+<p>The checklist below is a suggested review process for ordinary purchase invoices. Imports, reverse charge, ISD documents and other special cases need their own review. Your accountant determines the tax treatment.</p>
+<h2 id="start">1. Start with the same scope</h2>
+<p>Record the business GSTIN, the period being reviewed and when each file was exported. Keep the original purchase register and GSTR-2B download alongside your working copies.</p>
+<ul><li>Confirm that both files belong to the intended registration.</li><li>Record the rows and totals imported, and investigate rejected or skipped records.</li><li>Keep earlier-period exceptions visible so they do not disappear between reviews.</li></ul>
+<p>If the underlying statement changes, use the current download and revisit affected decisions. Record which version the final review used.</p>
+<h2 id="compare">2. Compare the details, not just the totals</h2>
+<p>Use supplier GSTIN, document type, invoice number and date to identify candidate pairs. Then compare taxable value and the individual tax components. Two suppliers can issue the same invoice number.</p>
+<p>Formatting differences deserve inspection. <code>INV/041</code> and <code>INV-041</code> may refer to the same document, but removing punctuation is not enough to establish that. Keep both original values visible.</p>
+<h2 id="exceptions">3. Give each exception a next step</h2>
+<div class="blog-table-wrap" tabindex="0" role="region" aria-label="Mismatch review actions"><table><thead><tr><th scope="col">What you see</th><th scope="col">What to check next</th></tr></thead><tbody>
+<tr><td>In the books, missing from this 2B</td><td>Check the invoice, recipient details, supplier reporting and relevant statement period. Record what needs supplier follow-up.</td></tr>
+<tr><td>In 2B, missing from the books</td><td>Locate the source document and confirm whether the transaction belongs to the business before adding an entry.</td></tr>
+<tr><td>Different values or tax amounts</td><td>Compare the original document, register entry and statement side by side. Identify which source needs correction.</td></tr>
+<tr><td>Duplicate or competing matches</td><td>Keep the ambiguity visible. Confirm document identity before choosing a match or removing a duplicate.</td></tr>
+<tr><td>Credit note or amendment</td><td>Review its relationship to the original document and previous treatment; retain document type and sign.</td></tr>
+</tbody></table></div>
+<p>Assign an owner and a next-review date. Keep unresolved items open with a reason instead of forcing a match to make the totals agree.</p>
+<h2 id="example">4. Separate a discrepancy from a tax decision</h2>
+<div class="blog-example"><p class="blog-eyebrow">ILLUSTRATIVE EXAMPLE · SYNTHETIC DATA</p><p>A register shows ₹900 CGST and ₹900 SGST for an invoice. Its candidate in GSTR-2B shows ₹810 and ₹810. The difference is ₹180.</p><p>That is a discrepancy to investigate. It is not evidence that ₹180 is recoverable. Compare the original invoice, check for an amendment and record the reviewer’s conclusion.</p></div>
+<h2 id="handoff">5. Hand over a report someone else can review</h2>
+<p>For each exception, retain the source references, values from both files, explanation, proposed action, owner and reviewer’s decision. Summarise resolved items and open questions separately.</p>
+<p>Before handing the work over, check that:</p>
+<ul><li>Every imported row is accounted for, including unsupported or rejected records.</li><li>The final totals can be traced to the reviewed records.</li><li>Open exceptions have an owner and a documented next step.</li><li>The accountant has recorded the eligibility and return-preparation decisions.</li></ul>
+<p>DoAide GST supports purchase-data preparation, GSTR-2B reconciliation and exception review. Start with a sample period to see how the workflow fits your firm. Review the output before using it in return preparation.</p>
+<div class="blog-article-cta"><h2>Walk through a reconciliation with us.</h2><p>Bring your questions. A sample-data demo can show the review workflow without sharing client records.</p><a class="btn btn--primary" href="/demo/" data-umami-event="demo-request-open">Request a DoAide GST demo →</a></div>
+<p class="blog-source-note">Reference checked on 3 November 2026: <a href="https://tutorial.gst.gov.in/userguide/returns/FAQ_gstr2b.htm">GST portal — FAQs on Form GSTR-2B</a>. This article describes a working process, not a determination of credit eligibility for a particular transaction.</p>
+<a class="text-link" href="/blog.html">← Back to the GST blog</a>
+</article></div></div>
+</main>
+<footer class="footer" id="company">
+<div class="wrap">
+<div class="footer__grid">
+<div class="footer__brand">
+<a class="brand" href="/">
+<svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true">
+<rect width="24" height="24" rx="6" fill="#111"/>
+<circle cx="5" cy="5" r="2.3" fill="#0d9488"/>
+<circle cx="12" cy="5" r="2.3" fill="#d97706"/>
+<circle cx="19" cy="5" r="2.3" fill="#e11d48"/>
+<circle cx="5" cy="12" r="2.3" fill="#7c3aed"/>
+<circle cx="12" cy="12" r="2.3" fill="#0284c7"/>
+<circle cx="19" cy="12" r="2.3" fill="#16a34a"/>
+<circle cx="5" cy="19" r="2.3" fill="#db2777"/>
+<circle cx="12" cy="19" r="2.3" fill="#ea580c"/>
+<circle cx="19" cy="19" r="2.3" fill="#4f46e5"/>
+</svg> DoAide GST</a>
+<p class="footer__about">Invoice review, GSTR-2B reconciliation and return preparation for Indian accounting firms.</p>
+</div>
+<div>
+<h4>Product</h4>
+<ul>
+<li>
+<a href="/demo/">Book a demo</a>
+</li>
+<li>
+<a href="https://gst.doaide.com/pricing">Plans &amp; limits</a>
+</li>
+<li>
+<a href="https://gst.doaide.com/login">Sign in</a>
+</li>
+</ul>
+</div>
+<div>
+<h4>Resources</h4>
+<ul>
+<li>
+<a href="https://gst.doaide.com/">Free GST tools</a>
+</li>
+<li>
+<a href="/guides/">GST guides</a>
+</li>
+<li>
+<a href="/blog.html">GST blog</a>
+</li>
+</ul>
+</div>
+<div>
+<h4>DoAide</h4>
+<ul>
+<li>
+<a href="/company/">Company</a>
+</li>
+<li>
+<a href="mailto:support@doaide.com">Contact</a>
+</li>
+<li>
+<a href="/sitemap.xml">Sitemap</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer__bottom">
+<span>© <span id="year">2026</span> DoAide. Made in India.</span>
+<span>Prepare. Review. File with confidence.</span>
+</div>
+</div>
+</footer>
+</body>
+</html>
