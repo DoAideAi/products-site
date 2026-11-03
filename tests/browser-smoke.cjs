@@ -14,6 +14,7 @@ async function main() {
       await page.setViewportSize({ width, height: 900 });
       const response = await page.goto(base, { waitUntil: 'networkidle' });
       assert.equal(response.status(), 200);
+      if (await page.getByRole('button', { name: 'Decline', exact: true }).isVisible()) await page.getByRole('button', { name: 'Decline', exact: true }).click();
       assert.equal(await page.locator('#products .principle').count(), 3);
       assert.match(await page.locator('h1').innerText(), /GST reconciliation/);
       assert.equal(await page.locator('#free-tools .tool').count(), 3);
@@ -42,20 +43,34 @@ async function main() {
     await page.locator('#mobile-nav').getByRole('link', { name: 'Guides' }).click();
     await page.waitForURL('**/guides/');
     await page.goto(`${base}/demo/`, { waitUntil: 'networkidle' });
-    await page.getByRole('button', { name: 'Prepare demo request' }).click();
-    assert(await page.locator('#request-result').isHidden(), 'Invalid request must not produce a draft');
+    let submissions = 0;
+    let fail = true;
+    await page.route('**/api/v1/feedback/demo', async route => {
+      submissions++;
+      const body = route.request().postDataJSON();
+      assert.equal(body.firm, 'Example & Co');
+      assert.equal(body.email, 'accountant@example.com');
+      await route.fulfill({ status: fail ? 503 : 201, contentType: 'application/json', body: JSON.stringify(fail ? { error: 'unavailable' } : { reference: 'DEMO-123' }) });
+    });
+    await page.evaluate(() => { window.testEvents = []; window.umami = { track: name => window.testEvents.push(name) }; });
+    await page.getByRole('button', { name: 'Send demo request' }).click();
+    assert.equal(submissions, 0, 'Invalid form must not be sent');
     await page.getByLabel('Your name').fill('Test Accountant');
     await page.getByLabel('Firm or business').fill('Example & Co');
     await page.getByLabel('Reply email').fill('accountant@example.com');
     await page.getByLabel('Workflow or preferred time').fill('Compare invoices & review discrepancies.');
-    await page.getByRole('button', { name: 'Prepare demo request' }).click();
-    const request = new URL(await page.getByRole('link', { name: 'Open email app' }).getAttribute('href'));
-    assert.equal(request.protocol, 'mailto:');
-    assert.equal(request.pathname, 'support@doaide.com');
-    assert.match(request.searchParams.get('body'), /Example & Co/);
-    assert.match(await page.locator('#request-status').innerText(), /not booked yet/);
-    await page.getByLabel('Firm or business').fill('Changed firm');
-    assert(await page.locator('#request-result').isHidden(), 'Changing a field must invalidate the old draft');
+    await page.getByRole('button', { name: 'Send demo request' }).click();
+    await page.waitForFunction(() => document.getElementById('request-status').textContent.includes('could not confirm'));
+    assert(await page.locator('#request-result').isHidden(), 'Failed save must not show success');
+    assert.deepEqual(await page.evaluate(() => window.testEvents), [], 'Failed save must not count as a conversion');
+    fail = false;
+    await page.getByRole('button', { name: 'Send demo request' }).click();
+    await page.locator('#request-result').waitFor();
+    assert.equal(await page.locator('#request-reference').innerText(), 'DEMO-123');
+    assert.match(await page.locator('#request-status').innerText(), /Request received/);
+    assert(await page.getByRole('button', { name: 'Request received' }).isDisabled());
+    assert.equal(submissions, 2);
+    assert.deepEqual(await page.evaluate(() => window.testEvents), ['demo_request_submitted']);
     await page.setViewportSize({ width: 1440, height: 1000 });
     await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
     await page.screenshot({ path: '/tmp/doaide-demo.png', fullPage: true });
@@ -98,7 +113,7 @@ async function main() {
     await page.locator('#qr-output.visible').waitFor();
     assert(await page.locator('#qr-image').evaluate(img => img.complete && img.naturalWidth > 0));
     assert.deepEqual(errors, [], 'Tool JavaScript errors');
-    console.log('PASS: responsive GST pages, demo draft and validation, menu/theme, FAQ and four retained tool workflows; no JavaScript errors');
+    console.log('PASS: responsive GST pages, saved demo confirmation, failure/retry and validation, menu/theme, FAQ and four retained tool workflows; no JavaScript errors');
   } finally {
     await browser.close();
   }

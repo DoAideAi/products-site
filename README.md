@@ -32,12 +32,24 @@ older Hetzner showcase, not doaide.com.
 
 ## Demo requests
 
-The form prepares a `mailto:` link on the visitor's device. The visitor sends the
-email to `support@doaide.com`; a reply arranges a time. This is not a scheduling
-service or a server-side lead database. It never claims a booking is confirmed.
-A copy fallback supports webmail, and direct email is available without JavaScript.
-Umami receives only fixed funnel event names, never submitted form fields.
-A prepared draft or email-app click is **not** a completed lead or booked demo.
+The form posts to `https://gst.doaide.com/api/v1/feedback/demo`. A successful
+response means the request has been committed to the GST database. Operators
+read and reply from the [admin inbox](https://gst.doaide.com/admin/feedback),
+using the approved admin Google account. These are requests, not booked appointments.
+SMTP notifications are not configured; check the inbox for new requests.
+Direct email remains available when JavaScript or the connection is unavailable.
+
+Only `demo_request_submitted` after a successful response counts as a lead.
+Google Ads measurement is optional and disabled until the visitor accepts it;
+consent is shared across doaide.com and gst.doaide.com. Event labels in
+`assets/ads.js` belong to account 952-322-4323, tag AW-18552515324. Keep this file
+identical to `frontend/public/ads.js` in GSTBot. No form contents are sent to Google.
+Successful signup, pilot, product-use and paid conversion hooks live in the app.
+Google reporting may lag; validate dispatch separately from attributed conversions.
+
+Tests: `NODE_PATH=<directory containing jsdom> node --test tests/ads.test.cjs`
+and the browser smoke command above. Browser tests intercept form submissions;
+they do not create real leads or send conversion requests to Google.
 
 ## Publish and roll back
 

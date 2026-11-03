@@ -14,30 +14,45 @@
   document.getElementById('year').textContent = new Date().getFullYear();
   const form = document.getElementById('demo-form');
   if (!form) return;
-  form.querySelector('button[type=submit]').disabled = false;
+  const button = form.querySelector('button[type=submit]');
+  button.disabled = false;
   const result = document.getElementById('request-result');
-  form.addEventListener('submit', (event) => {
+  const status = document.getElementById('request-status');
+  let busy = false;
+  let submitted = false;
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (busy || submitted || !form.reportValidity()) return;
+    busy = true;
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.textContent = '';
     const values = new FormData(form);
-    const body = ['Hello DoAide,', '', 'I would like a demo of DoAide GST.', '',
-      'Name: ' + values.get('name').trim(), 'Firm: ' + values.get('firm').trim(),
-      'Reply email: ' + values.get('email').trim(), 'Client GSTINs: ' + values.get('volume'),
-      'Workflow / preferred time: ' + (values.get('workflow').trim() || 'To discuss'), '',
-      'Please reply to arrange a time.'].join('\n');
-    document.getElementById('request-preview').textContent = body;
-    document.getElementById('send-request').href = 'mailto:support@doaide.com?subject=' + encodeURIComponent('DoAide GST demo request') + '&body=' + encodeURIComponent(body);
-    result.hidden = false;
-    document.getElementById('request-status').textContent = 'Your email draft is ready. Open your email app and send it to request a demo. Your appointment is not booked yet.';
-    result.focus();
-    // Event names only: never send names, emails or workflow notes to analytics.
-    try { if (typeof window.umami?.track === 'function') window.umami.track('demo-email-prepared'); } catch (_) {}
-  });
-  form.addEventListener('input', () => { result.hidden = true; });
-  document.getElementById('copy-request').addEventListener('click', async () => {
-    const status = document.getElementById('request-status');
+    const payload = Object.fromEntries(['name', 'firm', 'email', 'volume', 'workflow', 'website'].map(key => [key, String(values.get(key) || '').trim()]));
     try {
-      await navigator.clipboard.writeText(document.getElementById('request-preview').textContent);
-      status.textContent = 'Copied. Paste this into an email to support@doaide.com and send it to request a demo.';
-    } catch (_) { status.textContent = 'Copy is unavailable here. Select the draft below and paste it into an email to support@doaide.com.'; }
+      const response = await fetch('https://gst.doaide.com/api/v1/feedback/demo', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        credentials: 'omit', body: JSON.stringify(payload), signal: AbortSignal.timeout(20000),
+      });
+      if (!response.ok) throw new Error(response.status === 429 ? 'Too many requests. Please email support@doaide.com to arrange your demo.' : 'We could not confirm your request. Please try again or email support@doaide.com.');
+      const saved = await response.json();
+      if (!/^DEMO-\d+$/.test(saved.reference || '')) throw new Error('We could not confirm your request. Please email support@doaide.com.');
+      submitted = true;
+      result.hidden = false;
+      document.getElementById('request-reference').textContent = saved.reference;
+      status.textContent = 'Request received. We’ll reply by email to arrange a time. Your appointment is confirmed when we agree a time with you.';
+      result.focus();
+      button.textContent = 'Request received';
+      // Only a committed request counts. No form fields reach analytics.
+      try { window.umami?.track('demo_request_submitted'); } catch (_) {}
+      try { window.doaideAds?.conversion('demo_request_submitted', { transaction_id: saved.reference }); } catch (_) {}
+    } catch (error) {
+      status.textContent = error.name === 'TimeoutError' || error.name === 'TypeError'
+        ? 'We could not confirm delivery. Please email support@doaide.com, or try again when your connection is working.' : error.message;
+      button.textContent = 'Send demo request';
+    } finally {
+      busy = false;
+      button.disabled = submitted;
+    }
   });
 })();

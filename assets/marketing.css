@@ -367,3 +367,5 @@ img, svg { display: block; }
 
 .cta h2 {font-size:clamp(1.75rem,3.6vw,2.5rem);line-height:1.15;letter-spacing:-.03em}
 section[id] {scroll-margin-top:88px}
+
+.form-trap {position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}
