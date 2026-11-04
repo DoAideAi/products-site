@@ -104,3 +104,22 @@ theme persistence and readable content without JavaScript.
 This release is based on production commit `8e4aa7c`, preserving the live demo
 submission and consented measurement changes. Previous production deployment:
 `a7e1ec63-96ae-4855-ab06-4f9d39e71dd1`.
+
+## RSS subscriptions
+
+The RSS 2.0 feed is published at `https://doaide.com/rss.xml`. The blog provides a
+visible subscription link; the homepage, guides hub, blog hub and included
+articles advertise the feed through HTML autodiscovery.
+
+`build/release.py` generates the feed with `build/generate_rss.py` on every release.
+The hub's `Blog.blogPost` structured data selects articles and titles; each
+article's structured data supplies its description and original `datePublished`.
+Items use stable clean-URL GUIDs and are sorted newest first. Date-only metadata
+uses midnight in India Standard Time. Set `dateModified` when article content
+changes. Missing article files, missing required metadata and duplicate URLs
+stop the release so it cannot silently publish an incomplete feed.
+
+Add new articles to the hub, include the RSS discovery link in their HTML head,
+and publish normally. There is no separate feed-editing step or scheduled task.
+Run `python3 -m unittest discover -s tests -p 'test_rss.py'` to check regeneration,
+XML escaping, stable identifiers and invalid source handling.

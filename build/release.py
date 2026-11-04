@@ -6,6 +6,7 @@ import json
 import shutil
 import sys
 import xml.etree.ElementTree as ET
+from generate_rss import generate_feed
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(sys.argv[1]).resolve()
@@ -20,6 +21,9 @@ for source in [ROOT]:
     for directory in ('blog', 'assets', 'guides', 'company', 'demo', 'privacy'):
         if (source / directory).exists():
             shutil.copytree(source / directory, OUT / directory, dirs_exist_ok=True)
+
+# Generate before checking links so discovery and subscription links are validated.
+feed_items = generate_feed(ROOT, OUT / 'rss.xml')
 
 class Links(HTMLParser):
     def __init__(self):
@@ -74,5 +78,5 @@ for path, parser in pages.items():
         elif url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
             broken.append([str(path.relative_to(OUT)), link, 'missing anchor'])
 
-print(json.dumps({'pages': len(pages), 'broken': broken, 'external': sorted(external)}, indent=2))
+print(json.dumps({'pages': len(pages), 'rss_items': feed_items, 'broken': broken, 'external': sorted(external)}, indent=2))
 sys.exit(bool(broken))
