@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,271
+G S T R two B mismatch? Start with the records.
+
+2
+00:00:03,271 --> 00:00:05,650
+Here are three steps for a clearer review.
+
+3
+00:00:06,300 --> 00:00:09,081
+First, confirm the registration and review period.
+
+4
+00:00:09,081 --> 00:00:10,669
+Keep both original files.
+
+5
+00:00:10,669 --> 00:00:13,450
+Compare the invoice details and tax amounts.
+
+6
+00:00:14,100 --> 00:00:17,947
+Next, investigate missing records, different amounts, and duplicate matches.
+
+7
+00:00:17,947 --> 00:00:22,650
+Give each exception a reason, an owner, and a review date.
+
+8
+00:00:23,300 --> 00:00:26,639
+Finally, keep the source references and the reviewer’s decision.
+
+9
+00:00:26,639 --> 00:00:30,350
+A match alone does not establish input tax credit eligibility.
+
+10
+00:00:31,000 --> 00:00:34,696
+Read the full checklist at do aide dot com slash blog.
+
+11
+00:00:34,696 --> 00:00:37,383
+Save this guide for your next reconciliation review.
