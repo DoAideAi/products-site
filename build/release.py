@@ -18,7 +18,7 @@ for source in [ROOT]:
     for path in source.iterdir():
         if path.is_file() and (path.suffix in ALLOWED or path.name in {'_headers', '_redirects', 'robots.txt', 'doaide2026indexkey.txt'}):
             shutil.copy2(path, OUT / path.name)
-    for directory in ('blog', 'assets', 'guides', 'company', 'demo', 'privacy'):
+    for directory in ('blog', 'assets', 'guides', 'company', 'demo', 'privacy', 'products'):
         if (source / directory).exists():
             shutil.copytree(source / directory, OUT / directory, dirs_exist_ok=True)
 

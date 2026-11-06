@@ -1,0 +1,715 @@
+{
+  "reviewed": "2026-11-06",
+  "products": [
+    {
+      "id": "gstbot",
+      "name": "DoAide GST",
+      "category": "tax",
+      "description": "Invoice review, GSTR-2B reconciliation and GST return preparation.",
+      "repository": "https://github.com/DoAideAi/GSTBot",
+      "website": "https://gst.doaide.com/",
+      "status": "Website available",
+      "featured": true
+    },
+    {
+      "id": "taxfile",
+      "name": "DoAide TaxFile",
+      "category": "tax",
+      "description": "Income-tax calculators and ITR preparation tools for India.",
+      "repository": "https://github.com/DoAideAi/DoAide-TaxFile",
+      "website": "https://tax.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "comply",
+      "name": "DoAide Comply",
+      "category": "tax",
+      "description": "Compliance calendars and health checks for Indian businesses.",
+      "repository": "https://github.com/DoAideAi/DoAide-Comply",
+      "website": "https://comply.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "einvoice",
+      "name": "DoAide E-Invoice",
+      "category": "tax",
+      "description": "Tools for Indian e-invoice preparation and validation.",
+      "repository": "https://github.com/DoAideAi/DoAide-EInvoice",
+      "website": "https://einvoice.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "insurekit",
+      "name": "DoAide InsureKit",
+      "category": "tax",
+      "description": "Premium, maturity, commission and plan-comparison tools for insurance agents.",
+      "repository": "https://github.com/DoAideAi/DoAide-InsureKit",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "emibuddy",
+      "name": "DoAide EMIBuddy",
+      "category": "tax",
+      "description": "EMI, SIP and loan-planning calculators.",
+      "repository": "https://github.com/DoAideAi/DoAide-EMIBuddy",
+      "website": "https://emi.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "fincalc",
+      "name": "DoAide FinCalc",
+      "category": "tax",
+      "description": "Financial calculators for everyday planning.",
+      "repository": "https://github.com/DoAideAi/DoAide-FinCalc",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "salary",
+      "name": "DoAide Salary",
+      "category": "tax",
+      "description": "Compare CTC, estimated take-home pay and job offers.",
+      "repository": "https://github.com/DoAideAi/DoAide-Salary",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "budget",
+      "name": "DoAide Budget",
+      "category": "tax",
+      "description": "Track income, expenses, budgets and savings goals in your browser.",
+      "repository": "https://github.com/DoAideAi/DoAide-Budget",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "billcheck",
+      "name": "BillCheck",
+      "category": "tax",
+      "description": "Scan receipts and check line-item arithmetic and tax totals.",
+      "repository": "https://github.com/DoAideAi/BillCheck",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "reclaim",
+      "name": "DoAide Reclaim",
+      "category": "tax",
+      "description": "Guided family searches across official unclaimed-asset portals in India.",
+      "repository": "https://github.com/DoAideAi/DoAide-Reclaim",
+      "website": "https://reclaim.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "n409",
+      "name": "N409",
+      "category": "tax",
+      "description": "AI-assisted valuation workflows, financial models and supporting reports.",
+      "repository": "https://github.com/DoAideAi/N409",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "bizname",
+      "name": "DoAide BizName",
+      "category": "business",
+      "description": "Generate business names and check domain and social-handle availability.",
+      "repository": "https://github.com/DoAideAi/DoAide-BizName",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "invoicer",
+      "name": "DoAide Invoicer",
+      "category": "business",
+      "description": "Invoice processing workflows for Indian businesses.",
+      "repository": "https://github.com/DoAideAi/DoAide-Invoicer",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "bill",
+      "name": "DoAide Bill",
+      "category": "business",
+      "description": "Create invoices, estimates, quotations and proforma invoices.",
+      "repository": "https://github.com/DoAideAi/DoAide-Bill",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "contracts",
+      "name": "DoAide Contracts",
+      "category": "business",
+      "description": "AI-assisted contract review and generation for small businesses.",
+      "repository": "https://github.com/DoAideAi/DoAide-Contracts",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "payroll",
+      "name": "DoAide Payroll",
+      "category": "business",
+      "description": "Payroll processing and employee pay workflows.",
+      "repository": "https://github.com/DoAideAi/DoAide-Payroll",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "inventory",
+      "name": "DoAide Inventory",
+      "category": "business",
+      "description": "Inventory tracking and stock-management workflows.",
+      "repository": "https://github.com/DoAideAi/DoAide-Inventory",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "khata",
+      "name": "DoAide Khata",
+      "category": "business",
+      "description": "Digital credit ledgers, payment reminders and statements for shopkeepers.",
+      "repository": "https://github.com/DoAideAi/DoAide-Khata",
+      "website": "https://khata.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "scheduler",
+      "name": "DoAide Scheduler",
+      "category": "business",
+      "description": "Scheduling and calendar-management workflows.",
+      "repository": "https://github.com/DoAideAi/DoAide-Scheduler",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "proposals",
+      "name": "DoAide Proposals",
+      "category": "business",
+      "description": "Create and manage business proposals.",
+      "repository": "https://github.com/DoAideAi/DoAide-Proposals",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "pitchcraft",
+      "name": "DoAide PitchCraft",
+      "category": "business",
+      "description": "AI-assisted pitch decks and financial models for startups.",
+      "repository": "https://github.com/DoAideAi/DoAide-PitchCraft",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "qrmenu",
+      "name": "DoAide QRMenu",
+      "category": "business",
+      "description": "Create digital restaurant menus that visitors open with a QR code.",
+      "repository": "https://github.com/DoAideAi/DoAide-QRMenu",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "caflow",
+      "name": "CAFlow",
+      "category": "business",
+      "description": "Client records, compliance calendars, documents and tasks for CA practices.",
+      "repository": "https://github.com/DoAideAi/CAFlow",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "complipilot",
+      "name": "CompliPilot",
+      "category": "business",
+      "description": "Compliance-management workflows and supporting documentation.",
+      "repository": "https://github.com/DoAideAi/CompliPilot",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "homenex",
+      "name": "HomeNex",
+      "category": "ai",
+      "description": "WhatsApp-based lead management for Indian real-estate brokers.",
+      "repository": "https://github.com/DoAideAi/HomeNex",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "gosumo",
+      "name": "GoSumo",
+      "category": "ai",
+      "description": "Shared conversations, AI response routing and human escalation across messaging channels.",
+      "repository": "https://github.com/DoAideAi/gosumo",
+      "website": null,
+      "status": "Source available",
+      "featured": true
+    },
+    {
+      "id": "pulse",
+      "name": "DoAide Pulse",
+      "category": "ai",
+      "description": "Turn project updates into reviewed blog posts and social content.",
+      "repository": "https://github.com/DoAideAi/DoAide-Pulse",
+      "website": null,
+      "status": "Source available",
+      "featured": true
+    },
+    {
+      "id": "autoapply",
+      "name": "DoAide AutoApply",
+      "category": "ai",
+      "description": "Personalized recruiter outreach, reply handling and job-application tracking.",
+      "repository": "https://github.com/DoAideAi/DoAide-AutoApply",
+      "website": null,
+      "status": "Source available",
+      "featured": true
+    },
+    {
+      "id": "aiknol-knol",
+      "name": "Cortex / Knol",
+      "category": "ai",
+      "description": "Agent memory, hybrid retrieval and temporal knowledge graphs.",
+      "repository": "https://github.com/aiknol/knol",
+      "website": null,
+      "status": "Source available",
+      "featured": true
+    },
+    {
+      "id": "fastcoder",
+      "name": "Fastcoder",
+      "category": "ai",
+      "description": "An autonomous development agent with multi-model routing and approval gates.",
+      "repository": "https://github.com/DoAideAi/fastcoder",
+      "website": null,
+      "status": "Source available",
+      "featured": true
+    },
+    {
+      "id": "code",
+      "name": "DoAide Code",
+      "category": "ai",
+      "description": "A multi-model coding assistant with routing and provider failover.",
+      "repository": "https://github.com/DoAideAi/DoAide-Code",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "voice",
+      "name": "DoAide Voice",
+      "category": "ai",
+      "description": "Voice-assistant workflows for business applications.",
+      "repository": "https://github.com/DoAideAi/DoAide-Voice",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "voicedesk",
+      "name": "VoiceDesk",
+      "category": "ai",
+      "description": "Conversational voice workflows for business teams.",
+      "repository": "https://github.com/DoAideAi/VoiceDesk",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "support",
+      "name": "DoAide Support",
+      "category": "ai",
+      "description": "An AI-assisted customer support desk with live chat.",
+      "repository": "https://github.com/DoAideAi/DoAide-Support",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "hireagent",
+      "name": "HireAgent",
+      "category": "ai",
+      "description": "AI-assisted hiring and recruitment workflows.",
+      "repository": "https://github.com/DoAideAi/HireAgent",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "documedic",
+      "name": "Documedic",
+      "category": "ai",
+      "description": "Clinical decision-support workflows for clinicians.",
+      "repository": "https://github.com/DoAideAi/documedic",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "resume",
+      "name": "DoAide Resume",
+      "category": "career",
+      "description": "Build r\u00e9sum\u00e9s and review them with ATS scoring tools.",
+      "repository": "https://github.com/DoAideAi/DoAide-Resume",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "coach",
+      "name": "DoAide Coach",
+      "category": "career",
+      "description": "Practice interviews and receive feedback on your answers.",
+      "repository": "https://github.com/DoAideAi/DoAide-Coach",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "docs",
+      "name": "DoAide Docs",
+      "category": "career",
+      "description": "Generate business documents, letters, receipts and forms.",
+      "repository": "https://github.com/DoAideAi/DoAide-Docs",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "legal",
+      "name": "DoAide Legal",
+      "category": "career",
+      "description": "Legal-document templates and generators for India.",
+      "repository": "https://github.com/DoAideAi/DoAide-Legal",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "dpdp",
+      "name": "DoAide DPDP",
+      "category": "career",
+      "description": "Privacy and data-protection compliance tools for Indian businesses.",
+      "repository": "https://github.com/DoAideAi/DoAide-DPDP",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "rentbanao",
+      "name": "DoAide RentBanao",
+      "category": "career",
+      "description": "Prepare rental agreements and estimate stamp duty.",
+      "repository": "https://github.com/DoAideAi/DoAide-RentBanao",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "payslip",
+      "name": "DoAide PaySlip",
+      "category": "career",
+      "description": "Create salary slips and employee pay documents.",
+      "repository": "https://github.com/DoAideAi/DoAide-PaySlip",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "pdf",
+      "name": "DoAide PDF",
+      "category": "career",
+      "description": "Merge, split, compress and convert PDF documents.",
+      "repository": "https://github.com/DoAideAi/DoAide-PDF",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "certificate",
+      "name": "DoAide Certificate",
+      "category": "career",
+      "description": "Design certificates and generate them in batches.",
+      "repository": "https://github.com/DoAideAi/DoAide-Certificate",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "flash",
+      "name": "DoAide Flash",
+      "category": "career",
+      "description": "Create flashcards and study with spaced repetition.",
+      "repository": "https://github.com/DoAideAi/DoAide-Flash",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "type",
+      "name": "DoAide Type",
+      "category": "career",
+      "description": "Practice typing and track speed and accuracy.",
+      "repository": "https://github.com/DoAideAi/DoAide-Type",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "habit",
+      "name": "DoAide Habit",
+      "category": "career",
+      "description": "Track daily habits, streaks and progress in your browser.",
+      "repository": "https://github.com/DoAideAi/DoAide-Habit",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "timer",
+      "name": "DoAide Timer",
+      "category": "career",
+      "description": "Pomodoro sessions, countdowns and stopwatch tools.",
+      "repository": "https://github.com/DoAideAi/DoAide-Timer",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "draw",
+      "name": "DoAide Draw",
+      "category": "creative",
+      "description": "An online whiteboard with drawing, shapes and text.",
+      "repository": "https://github.com/DoAideAi/DoAide-Draw",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "write",
+      "name": "DoAide Write",
+      "category": "creative",
+      "description": "A Markdown editor with live preview, diagrams and math.",
+      "repository": "https://github.com/DoAideAi/DoAide-Write",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "json",
+      "name": "DoAide JSON",
+      "category": "creative",
+      "description": "Format and inspect JSON with tools that run in your browser.",
+      "repository": "https://github.com/DoAideAi/DoAide-JSON",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "qr",
+      "name": "DoAide QR",
+      "category": "creative",
+      "description": "Create and customize QR codes for links and other content.",
+      "repository": "https://github.com/DoAideAi/DoAide-QR",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "colors",
+      "name": "DoAide Colors",
+      "category": "creative",
+      "description": "Build color palettes and explore color combinations.",
+      "repository": "https://github.com/DoAideAi/DoAide-Colors",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "contrast",
+      "name": "DoAide Contrast",
+      "category": "creative",
+      "description": "Check color contrast and explore accessible palettes.",
+      "repository": "https://github.com/DoAideAi/DoAide-Contrast",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "favicon",
+      "name": "DoAide Favicon",
+      "category": "creative",
+      "description": "Generate favicon packages from text, emoji or images.",
+      "repository": "https://github.com/DoAideAi/DoAide-Favicon",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "screenshot",
+      "name": "DoAide Screenshot",
+      "category": "creative",
+      "description": "Create styled code screenshots and quote cards.",
+      "repository": "https://github.com/DoAideAi/DoAide-Screenshot",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "convert",
+      "name": "DoAide Convert",
+      "category": "creative",
+      "description": "Online converters for common formats and units.",
+      "repository": "https://github.com/DoAideAi/DoAide-Convert",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "meme",
+      "name": "DoAide Meme",
+      "category": "creative",
+      "description": "Create and customize memes with templates and text.",
+      "repository": "https://github.com/DoAideAi/DoAide-Meme",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "emoji",
+      "name": "DoAide Emoji",
+      "category": "creative",
+      "description": "Search, combine and explore emojis.",
+      "repository": "https://github.com/DoAideAi/DoAide-Emoji",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "text",
+      "name": "DoAide Text",
+      "category": "creative",
+      "description": "Utilities for editing and transforming text.",
+      "repository": "https://github.com/DoAideAi/DoAide-Text",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "watermark",
+      "name": "DoAide Watermark",
+      "category": "creative",
+      "description": "Add watermarks to images.",
+      "repository": "https://github.com/DoAideAi/DoAide-Watermark",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "mockup",
+      "name": "DoAide Mockup",
+      "category": "creative",
+      "description": "Create visual mockups for designs and presentations.",
+      "repository": "https://github.com/DoAideAi/DoAide-Mockup",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "biolink",
+      "name": "DoAide Biolink",
+      "category": "creative",
+      "description": "Create a page of links for your online profile.",
+      "repository": "https://github.com/DoAideAi/DoAide-Biolink",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "sitemap",
+      "name": "DoAide Sitemap",
+      "category": "creative",
+      "description": "Generate sitemaps for websites.",
+      "repository": "https://github.com/DoAideAi/DoAide-Sitemap",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "poll",
+      "name": "DoAide Poll",
+      "category": "creative",
+      "description": "Create polls and surveys with shareable results.",
+      "repository": "https://github.com/DoAideAi/DoAide-Poll",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "shayari",
+      "name": "DoAide Shayari",
+      "category": "creative",
+      "description": "Hindi poetry, greetings, quotes and wishes.",
+      "repository": "https://github.com/DoAideAi/DoAide-Shayari",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "wrapped",
+      "name": "DoAide Wrapped",
+      "category": "creative",
+      "description": "Create a shareable year-in-review from local AI coding-agent logs.",
+      "repository": "https://github.com/DoAideAi/DoAide-Wrapped",
+      "website": "https://wrapped.doaide.com/",
+      "status": "Website available",
+      "featured": false
+    },
+    {
+      "id": "debloat",
+      "name": "DoAide Debloat",
+      "category": "creative",
+      "description": "Reversible Android debloating through ADB, with restore commands.",
+      "repository": "https://github.com/DoAideAi/DoAide-Debloat",
+      "website": null,
+      "status": "Source available",
+      "featured": false
+    },
+    {
+      "id": "suite",
+      "name": "DoAide Suite",
+      "category": "business",
+      "description": "Twelve operational workflows: Scope, Collect, AMC, RFQ, Tender, Handover, OrderDesk, Batch, Fees, Renew, SOP and ClaimPack.",
+      "repository": "https://github.com/DoAideAi/DoAide-Suite",
+      "website": null,
+      "status": "Local development",
+      "featured": false
+    }
+  ]
+}

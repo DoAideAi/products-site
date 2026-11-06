@@ -123,3 +123,23 @@ Add new articles to the hub, include the RSS discovery link in their HTML head,
 and publish normally. There is no separate feed-editing step or scheduled task.
 Run `python3 -m unittest discover -s tests -p 'test_rss.py'` to check regeneration,
 XML escaping, stable identifiers and invalid source handling.
+
+## Product portfolio — 6 November 2026
+
+`/products/` is the broader portfolio, linked from the marketing navigation and
+footer. It preserves the GST homepage and its `/#products` workflow anchor.
+Edit `build/product-portfolio.json`, then run `python3 build/generate-products.py`.
+The generated page contains the full catalog without JavaScript;
+`assets/products.js` adds name/description search and category filtering.
+
+Only verified product websites receive a website link. Other entries link to
+public source code, with the Suite explicitly marked as local development.
+Recheck the actual destination and identity before adding a website link;
+repository visibility or HTTP 200 alone does not prove product availability.
+Internal tracking, infrastructure, forks and unrelated repositories are omitted.
+
+Run `node tests/portfolio-smoke.cjs <release-url>` for portfolio navigation,
+filtering, empty results, responsive layout and the no-JavaScript fallback.
+The deployment baseline is production source `d7f1c5b`, including the current
+demo form, consented measurement and blog/RSS work. The pre-change production
+deployment was `0fc83cc4-d8c6-4453-a38d-2ddfb78ff4ad`.
